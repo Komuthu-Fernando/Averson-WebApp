@@ -23,7 +23,7 @@ function Footer() {
 	return (
 		<div className="bg-footer-bg mt-40 p-10 pt-20 text-white grid grid-cols-3 gap-8 justify-items-center">
 			<div>
-				<p className="text-justify">
+				<p className="text-left">
 					Avero Inc. is a multi-service engineering firm specializing in design,
 					build, testing, certification, and support services for embedded
 					flight systems & software, health technology, and advanced IT.

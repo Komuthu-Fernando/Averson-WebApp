@@ -4,6 +4,7 @@ import logo2 from '../assets/logo2.png';
 
 function Navbar() {
 	const [scrolled, setScrolled] = useState(false);
+	const [isMobile, setIsMobile] = useState(false);
 
 	useEffect(() => {
 		const handleScroll = () => {
@@ -15,8 +16,19 @@ function Navbar() {
 			}
 		};
 
+		const handleResize = () => {
+			setIsMobile(window.innerWidth < 768); // Adjust the breakpoint as needed
+		};
+
+		handleResize(); // Set initial screen size
+
 		window.addEventListener('scroll', handleScroll);
-		return () => window.removeEventListener('scroll', handleScroll);
+		window.addEventListener('resize', handleResize);
+
+		return () => {
+			window.removeEventListener('scroll', handleScroll);
+			window.removeEventListener('resize', handleResize);
+		};
 	}, []);
 
 	return (
@@ -30,21 +42,23 @@ function Navbar() {
 					src={scrolled ? logo2 : logo1}
 					alt="Logo"
 					className="w-12 h-auto ml-10"
-				/>{' '}
-				<div className="flex items-center space-x-8">
-					<NavLink href="/about" scrolled={scrolled}>
-						About
-					</NavLink>
-					<NavLink href="/solutions" scrolled={scrolled}>
-						Solutions
-					</NavLink>
-					<NavLink href="/our-work" scrolled={scrolled}>
-						Our Work
-					</NavLink>
-					<NavLink href="/resources" scrolled={scrolled}>
-						Resources
-					</NavLink>
-				</div>
+				/>
+				{!isMobile && ( // Render nav links only if not on mobile
+					<div className="flex items-center space-x-8">
+						<NavLink href="/about" scrolled={scrolled}>
+							About
+						</NavLink>
+						<NavLink href="/solutions" scrolled={scrolled}>
+							Solutions
+						</NavLink>
+						<NavLink href="/our-work" scrolled={scrolled}>
+							Our Work
+						</NavLink>
+						<NavLink href="/resources" scrolled={scrolled}>
+							Resources
+						</NavLink>
+					</div>
+				)}
 			</div>
 
 			<div>
