@@ -65,7 +65,7 @@ function ServicePage() {
 	};
 
 	return (
-		<div className="grid grid-cols-2 max-w-screen m-20 ">
+		<div className="grid grid-cols-2 max-w-screen m-20 mt-40">
 			<div className="flex justify-center">
 				<div>
 					<p className="text-3xl">Lorem ipsum</p>
@@ -81,7 +81,7 @@ function ServicePage() {
 										selectedService.id === service.id
 											? 'text-black border-black'
 											: 'text-stone-400 border-stone-400'
-									} border-b-2 pb-5`}
+									} border-b-2 pb-5 cursor-pointer`}
 								>
 									<div className="flex justify-between">
 										<span>{service.number}</span>

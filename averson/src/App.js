@@ -3,6 +3,10 @@ import {
   Hero,
   Industries,
   Services,
+  ServiceInformation,
+  OurWork,
+  Careers,
+  Footer,
 } from './components'
 
 function App() {
@@ -13,6 +17,10 @@ function App() {
         <Hero />
         <Industries />
         <Services />
+        <ServiceInformation />
+        <OurWork />
+        <Careers />
+        <Footer />
       </div>
     </div>
   );

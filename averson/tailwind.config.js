@@ -10,6 +10,9 @@ module.exports = {
     extend: {
       backgroundImage: {
         "hero-image": "url('/src/assets/LandingImage.png')",
+      },
+      colors: {
+        'footer-bg': '#1A1A1A'
       }
     },
   },
