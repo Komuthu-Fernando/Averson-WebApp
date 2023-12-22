@@ -6,6 +6,7 @@ import {
   ServiceInformation,
   OurWork,
   Careers,
+  Blogs,
   Footer,
 } from './components'
 
@@ -19,6 +20,7 @@ function App() {
         <Services />
         <ServiceInformation />
         <OurWork />
+        <Blogs />
         <Careers />
         <Footer />
       </div>

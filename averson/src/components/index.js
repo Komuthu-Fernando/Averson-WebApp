@@ -5,6 +5,7 @@ import Services from './Services';
 import ServiceInformation from './ServiceInformation';
 import OurWork from './OurWork';
 import Careers from './Careers';
+import Blogs from './Blogs';
 import Footer from './Footer';
 
 export {
@@ -15,5 +16,6 @@ export {
   ServiceInformation,
   OurWork,
   Careers,
+  Blogs,
   Footer,
 }
