@@ -21,14 +21,14 @@ function OurWork() {
 						<p>connecting people and goods</p>
 					</div>
 				</div>
-				<div className="overflow-x-auto col-span-3 mt-10">
+				<div className="overflow-x-auto col-span-3 mt-10 rounded-lg">
 					<div className="flex justify-between gap-16">
 						{images.map((image, index) => (
 							<img
 								key={index}
 								src={image}
 								alt={`Work ${index + 1}`}
-								className="w-80 h-auto rounded-lg"
+								className="w-80 h-auto rounded-lg transition duration-1000 transform hover:scale-105 overflow:hidden"
 							/>
 						))}
 					</div>
