@@ -41,12 +41,12 @@ function Industries() {
 					business-fortifying solutions.
 				</p>
 			</div>
-			<div className="grid grid-cols-1 md:grid-cols-2 gap-2">
+			<div className="grid grid-cols-1 md:grid-cols-2 gap-2 overflow-x-auto">
 				<div className="order-2 md:order-1">
 					<hr className="w-full border-t-2 border-gray-300 mb-2" />
-					<p className="my-5">Automotive</p>
+					<p className="my-5">Nuclear</p>
 					<div className="flex gap-4 max-w-full overflow-x-auto">
-						{SectionTwoData.map((data) => (
+						{SectionOneData.map((data) => (
 							<div key={data.id} className="relative">
 								<img
 									src={data.image}
@@ -65,9 +65,9 @@ function Industries() {
 				</div>
 				<div className="order-1 md:order-2">
 					<hr className="w-full border-t-2 border-gray-300 mb-2" />
-					<p className="my-5">Nuclear</p>
+					<p className="my-5">Automotive</p>
 					<div className="flex gap-4 max-w-full overflow-x-auto">
-						{SectionOneData.map((data) => (
+						{SectionTwoData.map((data) => (
 							<div key={data.id} className="relative">
 								<img
 									src={data.image}
