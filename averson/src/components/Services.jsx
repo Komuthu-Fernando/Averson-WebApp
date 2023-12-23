@@ -65,7 +65,7 @@ function ServicePage() {
 	};
 
 	return (
-		<div className="grid grid-cols-2 max-w-screen m-20 mt-40">
+		<div className="grid grid-cols-2 max-w-screen m-20">
 			<div className="flex justify-center">
 				<div>
 					<p className="text-3xl">Lorem ipsum</p>
@@ -74,14 +74,14 @@ function ServicePage() {
 					</p>
 					<ul>
 						{servicesData.map((service) => (
-							<div className="my-10">
+							<div className="my-10" key={service.id}>
 								<li
 									onClick={() => handleServiceClick(service)}
 									className={`${
 										selectedService.id === service.id
 											? 'text-black border-black'
 											: 'text-stone-400 border-stone-400'
-									} border-b-2 pb-5 cursor-pointer`}
+									} border-b-2 pb-5`}
 								>
 									<div className="flex justify-between">
 										<span>{service.number}</span>
@@ -105,6 +105,13 @@ function ServicePage() {
 					</div>
 				</div>
 			</div>
+			<style jsx>{`
+				@media (max-width: 640px) {
+					.grid {
+						grid-template-columns: 1fr;
+					}
+				}
+			`}</style>
 		</div>
 	);
 }

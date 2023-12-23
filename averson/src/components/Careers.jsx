@@ -4,8 +4,8 @@ import careers2 from '../assets/careers2.png';
 
 function Careers() {
 	return (
-		<div className="m-20 mt-40 flex grid grid-cols-2">
-			<div className="flex flex-col justify-self-center">
+		<div className="m-20 mt-40 flex flex-col md:flex-row">
+			<div className="flex flex-col md:w-1/2 md:pr-8">
 				<p className="mb-5">CAREERS</p>
 				<div className="text-5xl font-semibold">
 					<p>Be a part of</p>
@@ -21,17 +21,11 @@ function Careers() {
 					</button>
 				</div>
 			</div>
-			<div className="grid grid-cols-2 gap-2">
-				<img
-					src={careers1}
-					alt="careers1"
-					className="rounded-xl w-full h-auto"
-				/>
-				<img
-					src={careers2}
-					alt="careers2"
-					className="rounded-xl w-full h-auto"
-				/>
+			<div className="md:w-1/2 md:pl-8 mt-6 md:mt-0">
+				<div className="grid grid-cols-2 gap-2">
+					<img src={careers1} alt="careers1" className="rounded-xl" />
+					<img src={careers2} alt="careers2" className="rounded-xl" />
+				</div>
 			</div>
 		</div>
 	);

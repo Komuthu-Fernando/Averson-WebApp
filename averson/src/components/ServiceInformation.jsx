@@ -14,8 +14,8 @@ function ServiceInformation() {
 						<span className="font-bold">finance engine</span>
 					</p>
 					<p className="mt-10 max-w-96">
-						Trusted experts who go the extra mile for custorners to provide
-						turn-key solutions, complete system integration,and comprehensive
+						Trusted experts who go the extra mile for customers to provide
+						turn-key solutions, complete system integration, and comprehensive
 						support.
 					</p>
 					<button className="mt-10 border-2 border-black text-black px-4 py-2 rounded-2xl hover:bg-black hover:text-white">
@@ -23,7 +23,16 @@ function ServiceInformation() {
 					</button>
 				</div>
 			</div>
-			<div className="flex items-center">
+			<div className="flex items-center md:hidden">
+				<div>
+					<img
+						src={image6}
+						alt="ServiceImage"
+						className="w-80 rounded-2xl hidden"
+					/>
+				</div>
+			</div>
+			<div className="flex items-center hidden md:block">
 				<div>
 					<img src={image6} alt="ServiceImage" className="w-80 rounded-2xl" />
 				</div>
