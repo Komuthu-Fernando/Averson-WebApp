@@ -43,7 +43,7 @@ function Navbar() {
 					alt="Logo"
 					className="w-12 h-auto ml-10"
 				/>
-				{!isMobile && ( // Render nav links only if not on mobile
+				{!isMobile && (
 					<div className="flex items-center space-x-8">
 						<NavLink href="/about" scrolled={scrolled}>
 							About
